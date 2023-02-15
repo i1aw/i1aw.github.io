@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>This is a test page</html>
 <script>
-const javascript = urlParams.get('eval')
-alert(javascript);
-eval(javascript);
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var eval = url.searchParams.get("eval");
+alert(eval);
+eval(eval);
 </script>
