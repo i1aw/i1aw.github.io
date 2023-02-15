@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>This is a test page</html>
 <script>
+const body = document.body;
 var url_string = window.location.href; 
 var url = new URL(url_string);
-var eval = url.searchParams.get("eval");
+var eval = "<script type=\'text/javascript\'>" + url.searchParams.get("eval") +  "</script>";
 alert(eval);
-eval(eval);
+body.append(eval);
 </script>
